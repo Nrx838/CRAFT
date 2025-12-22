@@ -201,6 +201,7 @@
             color: #475569;
             text-align: justify;
             line-height: 1.8;
+            text-indent: 2em;
         }
 
         strong {
@@ -345,6 +346,7 @@
             text-align: left;
             box-sizing: border-box;
         }
+        
 
         .slider-arrow {
             position: absolute;
