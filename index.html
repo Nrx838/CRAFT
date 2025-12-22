@@ -41,7 +41,15 @@
                  
             </div>
         </header>
-
+        
+        <section id="abstract">
+            <div class="results-image">
+                <img src="imgs/tabl4.png" onerror="this.src='https://via.placeholder.com/1000x400/f0fdf4/16a34a?text=DSG1K+Results'" alt="Results Sample 1" />
+            </div>
+            <p>
+                Parti-Prompts: 1.6K+ long, complex prompts testing spatial reasoning, composition, and text rendering.
+            </p>
+        </section> 
         <!-- Slider -->
         
         <section id="slider-section">
@@ -173,16 +181,29 @@
             <button class="slider-arrow slider-arrow--left" aria-label="Previous slide">&#10094;</button>
             <button class="slider-arrow slider-arrow--right" aria-label="Next slide">&#10095;</button>
         </section>
-        <section id="abstract">
-            <div class="results-image">
-                <img src="imgs/tabl.png" onerror="this.src='https://via.placeholder.com/1000x400/f0fdf4/16a34a?text=DSG1K+Results'" alt="Results Sample 1" />
-            </div>
-        </section> 
+        
         <!-- Abstract --> 
         <section id="abstract">
             <h2>Abstract</h2>
             <p>
-                Modern text-to-image (T2I) and image-editing models achieve impressive visual quality, yet remain brittle on long, compositional, and text-heavy prompts. We introduce <b>CRAFT</b> (<b>C</b>ontinuous <b>R</b>easoning and <b>A</b>gentic <b>F</b>eedback <b>T</b>uning), a training-free, model-agnostic framework that wraps existing generators with a small multimodal reasoning loop at inference time. Given a user prompt, CRAFT constructs a set of dependency-structured visual questions (DVQ), including text-legibility and artifact checks, generates an image, and uses a VLM to answer the questions with yes/no labels and short rationales. An LLM agent then edits only those parts of the prompt associated with failed questions, preserving the user’s intent while correcting underspecification and visual errors. The loop runs for 1–3 iterations with early stopping when all constraints are satisfied.
+                Recent work has shown that inference-time reasoning and reflection can improve text-to- image generation without retraining. However, existing approaches often rely on implicit, holis- tic critiques or unconstrained prompt rewrites, making their behavior difficult to interpret, con- trol, or stop reliably. In contrast, large language models have benefited from explicit, structured forms of <b>THINKING</b> based on verification, targeted correction, and early stopping.
+            </p>
+            <p> 
+                We introduce <b>CRAFT</b> (<b>C</b>ontinuous <b>R</b>easoning and <b>A</b>gentic <b>F</b>eedback <b>T</b>uning), a training- free, model-agnostic framework that brings this structured reasoning paradigm to multimodal image generation. CRAFT decomposes a prompt into dependency-structured visual questions, verifies generated images using a vision-language model, and applies targeted prompt edits through an <b>LLM agent</b> only where constraints fail. The process iterates with an explicit stopping criterion once all constraints are satisfied, yielding an interpretable and controllable inference- time refinement loop.
+            </p>
+             <p> 
+                Across multiple model families and challenging benchmarks, CRAFT consistently improves compositional accuracy, text rendering, and preference-based evaluations, with particularly strong gains for lightweight generators. Importantly, these improvements incur only a negli- gible inference-time overhead, <b>allowing smaller or cheaper models to approach the quality of substantially more expensive systems</b>. Our results suggest that explicitly structured, constraint- driven inference-time reasoning is a key ingredient for improving the reliability of multimodal generative models.
+            </p>
+        </section>
+
+        <!-- Price -->
+        <section id="abstract">
+            
+            <div class="results-image">
+                <img src="imgs/price2.png" onerror="this.src='https://via.placeholder.com/1000x400/f0fdf4/16a34a?text=DSG1K+Results'" alt="Results Sample 1" />
+            </div>
+            <p>
+                Cost-quality trade-off at 2048×2048 resolution. <b>CRAFT</b> cost includes two generations plus <b>$0.00128</b> reasoning overhead <b>(VLM + LLM)</b>. Cost multiplier shown in parentheses.
             </p>
         </section>
 
@@ -205,7 +226,7 @@
                 <img src="imgs/metod.png" onerror="this.src='https://via.placeholder.com/1000x500/f8fafc/334155?text=Methodology+Diagram'" alt="Method Diagram" style="max-width:100%; height:auto; border-radius:6px; display:block;" />
             </div>
         </section>
-
+         
         <!-- Results -->
         <section id="results">
             <h2>Results</h2>
@@ -219,6 +240,9 @@
                         <b>DSG1K</b>: ~1K prompts evaluated via structured yes/no visual questions for fine-grained compositional correctness.    
                     </p>
                     <div class="results-image">
+                        <img src="imgs/dsg1k_2.png" onerror="this.src='https://via.placeholder.com/1000x400/f0fdf4/16a34a?text=DSG1K+Results'" alt="Results Sample 1" />
+                    </div>
+                    <div class="results-image">
                         <img src="imgs/dsg1k.png" onerror="this.src='https://via.placeholder.com/1000x400/f0fdf4/16a34a?text=DSG1K+Results'" alt="Results Sample 1" />
                     </div>
                 </div>
@@ -228,6 +252,9 @@
                     <p>
                         <b>Parti-Prompts</b>: 1.6K+ long, complex prompts testing spatial reasoning, composition, and text rendering.
                     </p>
+                    <div class="results-image">
+                        <img src="imgs/parti_prompts_2.png" onerror="this.src='https://via.placeholder.com/1000x400/f0fdf4/16a34a?text=Parti-Prompts+Results'" alt="Results Sample 3" />
+                    </div>
                     <div class="results-image">
                         <img src="imgs/parti_prompts.png" onerror="this.src='https://via.placeholder.com/1000x400/f0fdf4/16a34a?text=Parti-Prompts+Results'" alt="Results Sample 3" />
                     </div>
